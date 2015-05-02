@@ -1,0 +1,45 @@
+{
+  "name": "sanssende/simplehtml",
+  "description": "Symfony LotteryResultBundle with Curl on millipiyango.gov.tr for Turkey lottery",
+  "type": "symfony-bundle",
+  "authors": [
+    {
+      "name": "Deniz Aktürk",
+      "email": "deniz.akturk@hotmail.com"
+    }
+  ],
+  "homepage": "https://github.com/denizakturk/lottery-result",
+  "support": {
+    "issues": "https://github.com/denizakturk/lottery-result/issues"
+  },
+  "keywords": [
+    "lottery",
+    "result",
+    "bundle",
+    "sayısal loto",
+    "süper loto",
+    "on numara",
+    "şans topu",
+    "piyango"
+  ],
+  "license": [
+    "MIT"
+  ],
+  "require": {
+  },
+  "autoload": {
+    "psr-0": {
+      "Sanssende\\LotteryBundle": ""
+    }
+  },
+  "target-dir": "Sanssende/LotteryBundle",
+  "repositories": [
+    {
+    }
+  ],
+  "extra": {
+    "branch-alias": {
+      "dev-master": "1.0-dev"
+    }
+  }
+}
