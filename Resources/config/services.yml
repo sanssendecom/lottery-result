@@ -1,0 +1,23 @@
+# Learn more about services, parameters and containers at
+# http://symfony.com/doc/current/book/service_container.html
+parameters:
+#    parameter_name: value
+
+services:
+#    service_name:
+#        class: AppBundle\Directory\ClassName
+#        arguments: ["@another_service_name", "plain_value", "%parameter_name%"]
+  lottery:
+      class: Sanssende\LotteryBundle\Service\LotteryResultService
+  sayisalloto:
+      class: Sanssende\LotteryBundle\Service\LotteryResultService
+      arguments: ['SAYISALLOTO']
+  sanstopu:
+      class: Sanssende\LotteryBundle\Service\LotteryResultService
+      arguments: ['SANSTOPU']
+  onnumara:
+      class: Sanssende\LotteryBundle\Service\LotteryResultService
+      arguments: ['ONNUMARA']
+  superloto:
+      class: Sanssende\LotteryBundle\Service\LotteryResultService
+      arguments: ['SUPERLOTO']

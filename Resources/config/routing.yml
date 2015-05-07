@@ -1,0 +1,4 @@
+lottery:
+    resource: "@LotteryBundle/Controller/"
+    type:     annotation
+    prefix:   /lottery
