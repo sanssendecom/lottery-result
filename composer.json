@@ -27,17 +27,9 @@
   "license": [
     "MIT"
   ],
-  "require": {
-  },
-  "require-dev": {
-  },
   "autoload": {
-    "psr-4": { "Sanssende\\LotteryBundle\\": "" }
+    "psr-0": {"sanssende\\LotteryBundle\\": ""}
   },
-  "repositories": [
-    {
-    }
-  ],
   "extra": {
     "branch-alias": {
       "dev-master": "1.0.x-dev"
