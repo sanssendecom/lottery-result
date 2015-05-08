@@ -1,7 +1,8 @@
 {
-  "name": "sanssende/lottery-bundle",
+  "name": "denizakturk/lottery-result",
   "type": "symfony-bundle",
   "description": "Symfony LotteryResultBundle with Curl on millipiyango.gov.tr for Turkey lottery",
+  "minimum-stability": "dev",
   "authors": [
     {
       "name": "Deniz Aktürk",
