@@ -3,15 +3,15 @@
  * SuperLotoAdapter
  *
  * Powered by sanssende.com
- * This file part of Sanssende LotteryBundle
+ * This file part of Sanssende LotteryResultBundle
  * Author: denizakturk
  */
 
-namespace Sanssende\LotteryBundle\Adapter;
+namespace Sanssendecom\LotteryResultBundle\Adapter;
 
 
-use Sanssende\LotteryBundle\Connection\MpiConnection;
-use Sanssende\LotteryBundle\Mapping\Superloto;
+use Sanssendecom\LotteryResultBundle\Connection\MpiConnection;
+use Sanssendecom\LotteryResultBundle\Mapping\Superloto;
 
 class SuperLotoAdapter extends LotteryAdapter
 {

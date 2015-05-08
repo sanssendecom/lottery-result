@@ -6,7 +6,7 @@
  * Time: 23:54
  */
 
-namespace Sanssende\LotteryBundle\Exception;
+namespace Sanssendecom\LotteryResultBundle\Exception;
 
 
 class ResultSuccessException extends \Exception

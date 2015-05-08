@@ -1,6 +1,6 @@
 <?php
 
-namespace Sanssende\LotteryBundle\DependencyInjection;
+namespace Sanssendecom\LotteryResultBundle\DependencyInjection;
 
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\Config\FileLocator;

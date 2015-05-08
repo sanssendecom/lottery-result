@@ -3,13 +3,13 @@
  * DataAdapter
  *
  * Powered  by sanssende.com
- * This file part of Sanssende LotteryBundle
+ * This file part of Sanssende LotteryResultBundle
  * Author: denizakturk
  */
 
-namespace Sanssende\LotteryBundle\Adapter;
+namespace Sanssendecom\LotteryResultBundle\Adapter;
 
-use Sanssende\LotteryBundle\Exception\JsonException;
+use Sanssendecom\LotteryResultBundle\Exception\JsonException;
 
 class DataAdapter
 {

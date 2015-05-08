@@ -3,15 +3,15 @@
  * SayisalLotoAdapter
  *
  * Powered by sanssende.com
- * This file part of Sanssende LotteryBundle
+ * This file part of Sanssende LotteryResultBundle
  * Author: denizakturk
  */
 
-namespace Sanssende\LotteryBundle\Adapter;
+namespace Sanssendecom\LotteryResultBundle\Adapter;
 
-use Sanssende\LotteryBundle\Connection\MpiConnection;
-use Sanssende\LotteryBundle\Exception\ResultSuccessException;
-use Sanssende\LotteryBundle\Mapping\Sayisalloto;
+use Sanssendecom\LotteryResultBundle\Connection\MpiConnection;
+use Sanssendecom\LotteryResultBundle\Exception\ResultSuccessException;
+use Sanssendecom\LotteryResultBundle\Mapping\Sayisalloto;
 
 class SayisalLotoAdapter extends LotteryAdapter
 {

@@ -21,7 +21,7 @@ Controller kısmına erişmek için;
 app/config/routing.yml dosyasına
 
 _lottey_bundle:
-    resource: "@LotteryBundle/Resources/config/routing.yml"
+    resource: "@LotteryResultBundle/Resources/config/routing.yml"
     
 tanımlamayı yapmanız yeterlidir, daha sonrasında "/lottery" adresini kullanarak controller'a erişebilirsiniz, daha fazla ayrıntı için bundle altındaki config/routing.yml dosyasına bakabilirsiniz. 
 
@@ -31,6 +31,6 @@ Servisleri kullanabilmek için
 app/config/config.yml dosyasına
 
 imports:
-    - { resource: @LotteryBundle/Resources/config/services.yml }
+    - { resource: @LotteryResultBundle/Resources/config/services.yml }
 
 şeklinde tanımlamanız yeterli olacaktır.

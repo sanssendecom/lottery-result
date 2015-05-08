@@ -1,6 +1,6 @@
 <?php
 
-namespace Sanssende\LotteryBundle\Tests\Controller;
+namespace Sanssendecom\LotteryResultBundle\Tests\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Test\WebTestCase;
 

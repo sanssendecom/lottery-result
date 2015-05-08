@@ -1,6 +1,6 @@
 <?php
 
-namespace Sanssende\LotteryBundle\DependencyInjection;
+namespace Sanssendecom\LotteryResultBundle\DependencyInjection;
 
 use Symfony\Component\Config\Definition\Builder\TreeBuilder;
 use Symfony\Component\Config\Definition\ConfigurationInterface;

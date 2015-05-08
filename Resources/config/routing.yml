@@ -1,4 +1,4 @@
 lottery:
-    resource: "@LotteryBundle/Controller/"
+    resource: "@LotteryResultBundle/Controller/"
     type:     annotation
     prefix:   /lottery

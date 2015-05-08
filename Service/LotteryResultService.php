@@ -3,20 +3,20 @@
  * LotteryResultService
  *
  * Powered  by sanssende.com
- * This file part of Sanssende LotteryBundle
+ * This file part of Sanssende LotteryResultBundle
  * Author: denizakturk
  */
 
-namespace Sanssende\LotteryBundle\Service;
+namespace Sanssendecom\LotteryResultBundle\Service;
 
-use Sanssende\LotteryBundle\Connection\ConnectionConstants;
-use Sanssende\LotteryBundle\Connection\MpiConnection;
-use Sanssende\LotteryBundle\Adapter\SayisalLotoAdapter;
-use Sanssende\LotteryBundle\Adapter\SansTopuAdapter;
-use Sanssende\LotteryBundle\Adapter\OnNumaraAdapter;
-use Sanssende\LotteryBundle\Adapter\SuperLotoAdapter;
-use Sanssende\LotteryBundle\Exception\LotteryTypeException;
-use Sanssende\LotteryBundle\Exception\ResultParameterException;
+use Sanssendecom\LotteryResultBundle\Connection\ConnectionConstants;
+use Sanssendecom\LotteryResultBundle\Connection\MpiConnection;
+use Sanssendecom\LotteryResultBundle\Adapter\SayisalLotoAdapter;
+use Sanssendecom\LotteryResultBundle\Adapter\SansTopuAdapter;
+use Sanssendecom\LotteryResultBundle\Adapter\OnNumaraAdapter;
+use Sanssendecom\LotteryResultBundle\Adapter\SuperLotoAdapter;
+use Sanssendecom\LotteryResultBundle\Exception\LotteryTypeException;
+use Sanssendecom\LotteryResultBundle\Exception\ResultParameterException;
 
 class LotteryResultService
 {

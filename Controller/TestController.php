@@ -3,24 +3,24 @@
  * Sanstopu
  *
  * Powered  by sanssende.com
- * This file part of Sanssende LotteryBundle
+ * This file part of Sanssende LotteryResultBundle
  * Author: denizakturk
  */
 
-namespace Sanssende\LotteryBundle\Controller;
+namespace Sanssendecom\LotteryResultBundle\Controller;
 
 
 use \Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
-use Sanssende\LotteryBundle\Connection\MpiConnection;
-use Sanssende\LotteryBundle\Connection\ConnectionConstants;
-use Sanssende\LotteryBundle\Adapter\OnNumaraAdapter;
+use Sanssendecom\LotteryResultBundle\Connection\MpiConnection;
+use Sanssendecom\LotteryResultBundle\Connection\ConnectionConstants;
+use Sanssendecom\LotteryResultBundle\Adapter\OnNumaraAdapter;
 
 /**
  * @Route("/example")
  * Class TestController
- * @package Sanssende\LotteryBundle\Controller
+ * @package Sanssende\LotteryResultBundle\Controller
  */
 class TestController extends Controller
 {

@@ -6,7 +6,7 @@
 
     <!--
     <services>
-        <service id="lottery.example" class="Sanssende\LotteryBundle\Example">
+        <service id="lottery.example" class="Sanssende\LotteryResultBundle\Example">
             <argument type="service" id="service_id" />
             <argument>plain_value</argument>
             <argument>%parameter_name%</argument>

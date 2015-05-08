@@ -1,6 +1,6 @@
 <?php
 
-namespace Sanssende\LotteryBundle\Controller;
+namespace Sanssendecom\LotteryResultBundle\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
@@ -8,7 +8,7 @@ use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
 /**
  * @Route("/")
  * Class DefaultController
- * @package Sanssende\LotteryBundle\Controller
+ * @package Sanssende\LotteryResultBundle\Controller
  */
 class DefaultController extends Controller
 {

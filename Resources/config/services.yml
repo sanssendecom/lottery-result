@@ -8,16 +8,16 @@ services:
 #        class: AppBundle\Directory\ClassName
 #        arguments: ["@another_service_name", "plain_value", "%parameter_name%"]
   lottery:
-      class: Sanssende\LotteryBundle\Service\LotteryResultService
+      class: Sanssendecom\LotteryResultBundle\Service\LotteryResultService
   sayisalloto:
-      class: Sanssende\LotteryBundle\Service\LotteryResultService
+      class: Sanssendecom\LotteryResultBundle\Service\LotteryResultService
       arguments: ['SAYISALLOTO']
   sanstopu:
-      class: Sanssende\LotteryBundle\Service\LotteryResultService
+      class: Sanssendecom\LotteryResultBundle\Service\LotteryResultService
       arguments: ['SANSTOPU']
   onnumara:
-      class: Sanssende\LotteryBundle\Service\LotteryResultService
+      class: Sanssendecom\LotteryResultBundle\Service\LotteryResultService
       arguments: ['ONNUMARA']
   superloto:
-      class: Sanssende\LotteryBundle\Service\LotteryResultService
+      class: Sanssendecom\LotteryResultBundle\Service\LotteryResultService
       arguments: ['SUPERLOTO']
