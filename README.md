@@ -1,5 +1,6 @@
 # lottery-result-bundle
-##Symfony LotteryResultBundle with Curl on millipiyango.gov.tr for Turkey lottery
+
+Symfony LotteryResultBundle with Curl on millipiyango.gov.tr for Turkey lottery
 
 ###http://www.sanssende.com tarafından oluşturulmuş ve geliştirilen bir symfony bundle'ıdır.
 
@@ -20,13 +21,16 @@ composer.json dosyasında require anahtarının altına aşağıdaki tanımlamay
 
 ```
 
-Servisleri kullanabilmek için 
+Bundle aktifleştirmek için
+-------------
 
-``` yaml
-# app/config/config.yml
 
-imports:
-    - { resource: @LotteryResultBundle/Resources/config/services.yml }
+``` php
+# app/AppKernel.php
+
+$bundles = array(
+            new Sanssendecom\LotteryResultBundle\LotteryResultBundle()
+        );
 ``` 
 
 Controller erişimi
