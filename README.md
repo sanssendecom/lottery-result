@@ -15,7 +15,7 @@ composer.json dosyasında require anahtarının altına aşağıdaki tanımlamay
 # composer.json
 
 "require": {
-        "denizakturk/lottery-result": "1.0.*@dev"
+        "sanssendecom/lottery-result-bundle": "1.0.*@dev"
     },
 
 ```
