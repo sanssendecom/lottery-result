@@ -1,7 +1,7 @@
 {
-  "name": "sanssende/simplehtml",
-  "description": "Symfony LotteryResultBundle with Curl on millipiyango.gov.tr for Turkey lottery",
+  "name": "sanssende/lottery-bundle",
   "type": "symfony-bundle",
+  "description": "Symfony LotteryResultBundle with Curl on millipiyango.gov.tr for Turkey lottery",
   "authors": [
     {
       "name": "Deniz Aktürk",
@@ -9,6 +9,7 @@
     }
   ],
   "homepage": "https://github.com/denizakturk/lottery-result",
+  "license": "MIT",
   "support": {
     "issues": "https://github.com/denizakturk/lottery-result/issues"
   },
@@ -27,19 +28,18 @@
   ],
   "require": {
   },
-  "autoload": {
-    "psr-0": {
-      "Sanssende\\LotteryBundle": ""
-    }
+  "require-dev": {
   },
-  "target-dir": "Sanssende/LotteryBundle",
+  "autoload": {
+    "psr-4": { "Sanssende\\LotteryBundle\\": "" }
+  },
   "repositories": [
     {
     }
   ],
   "extra": {
     "branch-alias": {
-      "dev-master": "1.0-dev"
+      "dev-master": "1.0.x-dev"
     }
   }
 }
