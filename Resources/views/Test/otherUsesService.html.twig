@@ -1,0 +1,10 @@
+<h1>Şans Sende - LotteryResultBundle</h1>
+{{ dump(result) }}
+<p>
+    <code>
+        <p>$lottery = $this->get('lottery');</p>
+        <p>$results = array();</p>
+        <p>$result['sayisalloto'] = $lottery->setOption('SAYISALLOTO', new \DateTime('2015-04-25'))->getResultClass();</p>
+        <p>$result['sanstopu'] = $lottery->setOption('SANSTOPU', new \DateTime('2015-05-06'))->getResultClass();</p>
+    </code>
+</p>

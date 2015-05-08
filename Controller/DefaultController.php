@@ -13,26 +13,12 @@ use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
 class DefaultController extends Controller
 {
     /**
-     * @Route("/hello/{name}")
+     * @Route("/", name="_lottery_index")
      * @Template()
      */
-    public function indexAction($name)
+    public function indexAction()
     {
-        return array('name' => $name);
+        return array();
     }
 
-    /**
-     * @Route("/connectiontest")
-     */
-    public function connectionTestAction()
-    {
-        /*
-        $mpiCon = new MpiConnection(new ConnectionConstants(ConnectionConstants::ONNUMARA), new \DateTime('2015-05-04'));
-        $sanstopu = new OnNumaraAdapter($mpiCon);
-        print_r($sanstopu->getResult());exit;*/
-        $sayisalloto = $this->get('sayisalloto');
-        $sayisalloto->setRaffleDate(new \DateTime('2015-04-25'));
-        dump($sayisalloto->getResultClass());exit;
-
-    }
 }

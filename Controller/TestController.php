@@ -25,42 +25,40 @@ use Sanssendecom\LotteryResultBundle\Adapter\OnNumaraAdapter;
 class TestController extends Controller
 {
     /**
-     * @Route("/manuel")
+     * @Route("/manuel", name="_lottery_test_manuel")
+     * @Template()
      */
-    public function manuelConnectionAction()
+    public function manuelAction()
     {
         $mpiCon = new MpiConnection(new ConnectionConstants(ConnectionConstants::ONNUMARA), new \DateTime('2015-05-04'));
         $onnumara = new OnNumaraAdapter($mpiCon);
-        dump($onnumara->getResult());
-        exit;
-        //return $onnumara->getResult();
+        return array('result' => $onnumara->getResult());
     }
 
     /**
-     * @Route("/service")
+     * @Route("/service", name="_lottery_test_service")
+     * @Template()
      */
-    public function serviceConnectionAction()
+    public function serviceAction()
     {
         $sayisalloto = $this->get('sayisalloto');
         $sayisalloto->setRaffleDate(new \DateTime('2015-04-25'));
-        dump($sayisalloto->getResultClass());
-        exit;
-        //return $sayisalloto->getResultClass();
+
+        return array('result' => $sayisalloto->getResultClass());
     }
 
     /**
-     * @Route("/otherusingservice")
+     * @Route("/otherusesservice", name="_lottery_test_otherusesservice")
+     * @Template()
      */
-    public function otherServiceConnectionAction()
+    public function otherUsesServiceAction()
     {
         $lottery = $this->get('lottery');
         $results = array();
         $result['sayisalloto'] = $lottery->setOption('SAYISALLOTO', new \DateTime('2015-04-25'))->getResultClass();
         $result['sanstopu'] = $lottery->setOption('SANSTOPU', new \DateTime('2015-05-06'))->getResultClass();
-        dump($result);
-        exit;
 
-        //return array();
+        return array('result' => $result);
 
     }
 }
