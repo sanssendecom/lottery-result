@@ -1,5 +1,5 @@
 {
-  "name": "denizakturk/lottery-result",
+  "name": "SanssendeCom/lottery-result",
   "type": "symfony-bundle",
   "description": "Symfony LotteryResultBundle with Curl on millipiyango.gov.tr for Turkey lottery",
   "minimum-stability": "dev",
@@ -9,10 +9,10 @@
       "email": "deniz.akturk@hotmail.com"
     }
   ],
-  "homepage": "https://github.com/denizakturk/lottery-result",
+  "homepage": "https://github.com/SanssendeCom/lottery-result",
   "license": "MIT",
   "support": {
-    "issues": "https://github.com/denizakturk/lottery-result/issues"
+    "issues": "https://github.com/SanssendeCom/lottery-result/issues"
   },
   "keywords": [
     "lottery",
@@ -28,7 +28,7 @@
     "MIT"
   ],
   "autoload": {
-    "psr-0": {"sanssende\\LotteryBundle\\": ""}
+    "psr-4": {"SanssendeCom\\LotteryBundle\\": ""}
   },
   "extra": {
     "branch-alias": {
