@@ -33,6 +33,26 @@ $bundles = array(
         );
 ``` 
 
+Servis kullanımı için
+-------------
+
+``` yaml
+# app/config/services.yml
+
+imports:
+    - { resource: @LotteryResultBundle/Resources/config/services.yml }
+``` 
+
+yukarıdaki dosyayı import ettiğinizde servise erişebilirsiniz, alt satırda kullanım örneği mevcuttur.
+
+``` php
+
+$lottery = $this->get('lottery');
+$sayisallotoResult  = $lottery->setOption('SAYISALLOTO', new \DateTime('2015-04-25'))->getResultClass();
+$sanstopuResult     = $lottery->setOption('SANSTOPU', new \DateTime('2015-05-06'))->getResultClass()
+
+``` 
+
 Controller erişimi
 -------------
 Aşağıdaki gibi bir tanımlama yaparak "/lottery" adresinden index sayfasına erişerek bundle'ı test edebilirsiniz.
@@ -40,6 +60,6 @@ Aşağıdaki gibi bir tanımlama yaparak "/lottery" adresinden index sayfasına 
 ``` yaml
 # app/config/routing.yml
 
-_lottey_bundle:
+_lottey_result_bundle:
     resource: "@LotteryResultBundle/Resources/config/routing.yml"
 ``` 
