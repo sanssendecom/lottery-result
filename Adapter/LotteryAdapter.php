@@ -51,6 +51,11 @@ class LotteryAdapter extends DataAdapter
         return $data;
     }
 
+    public function winningDistricts()
+    {
+        return $this->buyukIkrKazananIlIlceler;
+    }
+
     public function handed()
     {
         return (empty($this->devretti) ? 0 : 1);

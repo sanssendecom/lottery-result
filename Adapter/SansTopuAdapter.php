@@ -10,6 +10,8 @@
 namespace Sanssendecom\LotteryResultBundle\Adapter;
 
 use Sanssendecom\LotteryResultBundle\Connection\MpiConnection;
+use Sanssendecom\LotteryResultBundle\Mapping\District;
+use Sanssendecom\LotteryResultBundle\Mapping\Province;
 use Sanssendecom\LotteryResultBundle\Mapping\Sanstopu;
 
 class SansTopuAdapter extends LotteryAdapter
@@ -38,8 +40,7 @@ class SansTopuAdapter extends LotteryAdapter
         $this->createResultObject();
 
         $this->lottery->setId($this->oid);
-        $this->lottery->setWinningProvinces($this->buyukIkramiyeKazananIl);
-        $this->lottery->setWinningDistricts($this->buyukIkrKazananIlIlceler);
+        $this->setProvinces();
         $this->lottery->setHanded($this->handed);
         $this->lottery->setSpeed($this->speed);
         $this->lottery->setCyprusRevenue($this->cyprusRevenue);
@@ -63,6 +64,42 @@ class SansTopuAdapter extends LotteryAdapter
 
         $this->lottery->setJackpotWinners($this->jackpotWinners);
         $this->lottery->setAmountOfNextCycle($this->amountOfNextCycle);
+    }
+
+    private function setProvinces()
+    {
+        if ($this->hasDistricts())
+        {
+            foreach ($this->winningDistricts as $provinceData)
+            {
+                $province = $this->lottery->getWinningProvinces()->get($provinceData->il);
+                if (empty($province))
+                {
+                    $province = new Province();
+                    $province->setCode($provinceData->il);
+                    $province->setName($provinceData->ilView);
+                }
+                $district = $province->getDistricts()->get($provinceData->ilce);
+                if (empty($district))
+                {
+                    $district = new District();
+                    $district->setCode($provinceData->ilce);
+                    $district->setName($provinceData->ilceView);
+                }
+
+                $district->setNumberOfPeople($district->getNumberOfPeople() + 1);
+                $province->getDistricts()->set($district->getCode(), $district);
+
+                $this->lottery->getWinningProvinces()->set($province->getCode(), $province);
+            }
+        }
+    }
+
+    private function hasDistricts()
+    {
+        $hasDistricts = $this->winningDistricts;
+
+        return !empty($hasDistricts);
     }
 
     public function getResult()

@@ -9,6 +9,7 @@
 
 namespace Sanssendecom\LotteryResultBundle\Service;
 
+use Sanssendecom\LotteryResultBundle\Adapter\PiyangoAdapter;
 use Sanssendecom\LotteryResultBundle\Connection\ConnectionConstants;
 use Sanssendecom\LotteryResultBundle\Connection\MpiConnection;
 use Sanssendecom\LotteryResultBundle\Adapter\SayisalLotoAdapter;
@@ -22,7 +23,13 @@ class LotteryResultService
 {
 
     private $lotteryType;
+    /**
+     * @var \DateTime
+     */
     private $raffleDate;
+    /**
+     * @var MpiConnection
+     */
     private $connection;
 
     public function __construct($lotteryType = NULL, \DateTime $raffleDate = NULL)
@@ -91,8 +98,11 @@ class LotteryResultService
             case 'superloto':
                 return new SuperLotoAdapter($this->connection);
                 break;
+            case 'piyango':
+                return new PiyangoAdapter($this->connection);
+                break;
             default:
-                throw new LotteryTypeException('Not defined lottery type: ' . $this->lotteryType . '. Defined lottery type only SAYISALLOTO, SUPERLOTO, ONNUMARA, SANSTOPU');
+                throw new LotteryTypeException('Not defined lottery type: ' . $this->lotteryType . '. Defined lottery type only SAYISALLOTO, SUPERLOTO, ONNUMARA, SANSTOPU, PIYANGO');
                 break;
         }
     }

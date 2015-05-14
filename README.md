@@ -53,6 +53,17 @@ $sanstopuResult     = $lottery->setOption('SANSTOPU', new \DateTime('2015-05-06'
 
 ``` 
 
+Piyango bileti çekilişi
+-------------
+Milli piyango bileti çekiliş sonuçlarını aşağıda örnekteki gibi alabilirsiniz.
+
+``` php
+
+$lottery = $this->get('lottery');
+
+$result = $lottery->setOption('PIYANGO', new \DateTime('2015-05-09'))->getResultClass();
+``` 
+
 Controller erişimi
 -------------
 Aşağıdaki gibi bir tanımlama yaparak "/lottery" adresinden index sayfasına erişerek bundle'ı test edebilirsiniz.

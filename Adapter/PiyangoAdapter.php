@@ -1,6 +1,6 @@
 <?php
 /**
- * SayisalLotoAdapter
+ * PiyangoAdapter
  *
  * Powered by sanssende.com
  * This file part of Sanssende LotteryResultBundle
@@ -10,14 +10,25 @@
 namespace Sanssendecom\LotteryResultBundle\Adapter;
 
 use Sanssendecom\LotteryResultBundle\Connection\MpiConnection;
-use Sanssendecom\LotteryResultBundle\Exception\ResultSuccessException;
 use Sanssendecom\LotteryResultBundle\Mapping\District;
+use Sanssendecom\LotteryResultBundle\Mapping\Piyango;
 use Sanssendecom\LotteryResultBundle\Mapping\Province;
-use Sanssendecom\LotteryResultBundle\Mapping\Sayisalloto;
+use Sanssendecom\LotteryResultBundle\Mapping\TicketResult;
 
-class SayisalLotoAdapter extends LotteryAdapter
+class PiyangoAdapter extends TicketAdapter
 {
+    /**
+     * @var Piyango
+     */
     private $lottery;
+    /**
+     * @var TicketResult
+     */
+    private $ticketResult;
+    /**
+     * @var array
+     */
+    private $provinces;
 
     public function __construct(MpiConnection $connection)
     {
@@ -28,37 +39,34 @@ class SayisalLotoAdapter extends LotteryAdapter
 
     private function createResultObject()
     {
-        $this->lottery = new Sayisalloto();
+        $this->lottery = new Piyango();
+    }
+
+    private function createTicketResultObject()
+    {
+        $this->ticketResult = new TicketResult();
     }
 
     private function setDataToLottery()
     {
-        if (!$this->success)
-        {
-            throw new ResultSuccessException('Result not success');
-        }
 
         $this->createResultObject();
 
-        $this->lottery->setId($this->oid);
-        $this->setProvinces();
-        $this->lottery->setHanded($this->handed);
-        $this->lottery->setSpeed($this->speed);
-        $this->lottery->setCyprusRevenue($this->cyprusRevenue);
-        $this->lottery->setTransferAmount($this->transferAmount);
-        $this->lottery->setNumberOfColumns($this->numberOfColumn);
-        $this->lottery->setTax($this->tax);
-        $this->lottery->setBonusEh($this->bonusEh);
-        $this->lottery->setWeek($this->week);
-        $this->lottery->setTotalRevenue($this->totalRevenue);
-        $this->lottery->setRevenues($this->revenues);
-        $this->lottery->setGameOfChanceTax($this->gameOfChanceTax);
-        $this->lottery->setJackpot($this->jackpot);
-        $this->lottery->setWeekRollovers($this->weekRollovers);
+        $this->lottery->setRaffleName($this->raffleName);
         $this->lottery->setRaffleDate($this->raffleDate);
-        $this->lottery->setNumbers($this->numbers);
-        $this->lottery->setJackpotWinners($this->jackpotWinners);
-        $this->lottery->setAmountOfNextCycle($this->amountOfNextCycle);
+        $this->lottery->setNumberOfDigits($this->numberOfDigits);
+        $this->setProvinces();
+        foreach ($this->result as $result)
+        {
+            $this->createTicketResultObject();
+
+            $this->ticketResult->setNumberOfDigits($result->haneSayisi);
+            $this->ticketResult->setJackpot($result->ikramiye);
+            $this->ticketResult->setType($result->tip);
+            $this->ticketResult->setNumbers($result->numaralar);
+
+            $this->lottery->addResult($this->ticketResult);
+        }
     }
 
     private function setProvinces()
@@ -101,4 +109,5 @@ class SayisalLotoAdapter extends LotteryAdapter
     {
         return $this->lottery;
     }
+
 }

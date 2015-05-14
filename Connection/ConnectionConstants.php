@@ -11,10 +11,12 @@ namespace Sanssendecom\LotteryResultBundle\Connection;
 
 class ConnectionConstants
 {
-    const SAYISALLOTO = 'http://www.millipiyango.gov.tr/sonuclar/cekilisler/sayisal/';
-    const SANSTOPU    = 'http://www.millipiyango.gov.tr/sonuclar/cekilisler/sanstopu/';
-    const ONNUMARA    = 'http://www.millipiyango.gov.tr/sonuclar/cekilisler/onnumara/';
-    const SUPERLOTO   = 'http://www.millipiyango.gov.tr/sonuclar/cekilisler/superloto/';
+    const SAYISALLOTO       = 'http://www.millipiyango.gov.tr/sonuclar/cekilisler/sayisal/';
+    const SANSTOPU          = 'http://www.millipiyango.gov.tr/sonuclar/cekilisler/sanstopu/';
+    const ONNUMARA          = 'http://www.millipiyango.gov.tr/sonuclar/cekilisler/onnumara/';
+    const SUPERLOTO         = 'http://www.millipiyango.gov.tr/sonuclar/cekilisler/superloto/';
+    const PIYANGO           = 'http://mpi.gov.tr/sonuclar/cekilisler/piyango/';
+    const TICKETRAFFLEDATES = 'http://mpi.gov.tr/sonuclar/listCekilisleriTarihleri.php?tur=piyango';
 
     private $currentUri;
 

@@ -61,4 +61,17 @@ class TestController extends Controller
         return array('result' => $result);
 
     }
+
+    /**
+     * @Route("/piyango", name="_lottery_test_piyango")
+     * @param $date
+     * @Template()
+     */
+    public function piyangoAction()
+    {
+        $lottery = $this->get('lottery');
+        $result = $lottery->setOption('PIYANGO', new \DateTime('2015-05-09'))->getResultClass();
+
+        return array('result' => $result);
+    }
 }

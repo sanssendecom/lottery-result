@@ -9,12 +9,13 @@
 
 namespace Sanssendecom\LotteryResultBundle\Mapping;
 
+use Doctrine\Common\Collections\ArrayCollection;
+
 class Onnumara
 {
     private $oid;
     private $week;
     private $winningProvinces;
-    private $winningDistricts;
     private $handed;
     private $speed;
     private $cyprusRevenue;
@@ -31,6 +32,11 @@ class Onnumara
     private $jackpotWinners;
     private $amountOfNextCycle;
     private $transferAmount;
+
+    public function __construct()
+    {
+        $this->winningProvinces = new ArrayCollection();
+    }
 
     public function setId($oid)
     {
@@ -56,28 +62,19 @@ class Onnumara
         return $this->week;
     }
 
-    public function setWinningProvinces($winningProvinces)
+    public function addWinningProvince(Province $province)
     {
-        $this->winningProvinces = $winningProvinces;
+        $this->winningProvinces[] = $province;
+    }
 
-        return $this;
+    public function removeWinningProvince(Province $province)
+    {
+        $this->winningProvinces->removeElement($province);
     }
 
     public function getWinningProvinces()
     {
         return $this->winningProvinces;
-    }
-
-    public function setWinningDistricts($winningDistricts)
-    {
-        $this->winningDistricts = $winningDistricts;
-
-        return $this;
-    }
-
-    public function getWinningDistricts()
-    {
-        return $this->winningDistricts;
     }
 
     public function setHanded($handed)
