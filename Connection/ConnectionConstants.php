@@ -11,7 +11,7 @@ namespace Sanssendecom\LotteryResultBundle\Connection;
 
 class ConnectionConstants
 {
-    const SAYISALLOTO       = 'http://www.millipiyango.gov.tr/sonuclar/cekilisler/sayisal/';
+    const SAYISALLOTO       = 'http://www.millipiyango.gov.tr/sonuclar/cekilisler/sayisal/SAY_';
     const SANSTOPU          = 'http://www.millipiyango.gov.tr/sonuclar/cekilisler/sanstopu/';
     const ONNUMARA          = 'http://www.millipiyango.gov.tr/sonuclar/cekilisler/onnumara/';
     const SUPERLOTO         = 'http://www.millipiyango.gov.tr/sonuclar/cekilisler/superloto/';
